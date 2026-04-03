@@ -1,0 +1,500 @@
+/* »»»»»»»»»»»»»»» Reset + Base ««««««««««««««« */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f6f7fb;
+}
+
+/*  »»»»»»»»»»»»»»» Navbar ««««««««««««««« */
+nav {
+    position: fixed;
+    background: #1e3a8a;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 8%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    height: 40px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav .logo {
+    transform: scale(1.5)translateX(-80px);
+    transform-origin: left;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 8px 10px;
+    transition: 0.25s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.278);
+    border-radius: 10px;
+}
+
+/* »»»»»»»»»»»»»»» Home Section ««««««««««««««« */
+#home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("images/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg");
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+#home * {
+    position: relative;
+}
+
+#home h2 {
+    color: #ffffff;
+    font-size: 40px;
+    max-width: 900px;
+    margin-bottom: 16px;
+}
+
+#home p {
+    color: #e5e7eb;
+    font-size: 18px;
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+#home button {
+    border: none;
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#home button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* »»»»»»»»»»»»»»» Departments Section ««««««««««««««« */
+#departments {
+    text-align: center;
+    padding: 100px 8% 80px;
+    background: #f8fafc;
+}
+
+
+#departments h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #111827;
+}
+
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+.department-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    padding: 28px;
+    transition: 0.9s;
+}
+
+.department-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.department-card p {
+    font-size: 15px;
+    color: #4b5563;
+    margin-bottom: 18px;
+}
+
+.department-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    border-color: #3b82f6;
+}
+
+.department-card::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3b82f6;
+    margin: 0 auto 10px;
+    border-radius: 3px;
+}
+
+.department-card ul {
+    list-style: square;
+    margin-top: 15px;
+    padding-left: 20px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.department-card:hover ul {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.department-card ul li {
+    text-align: left;
+    font-size: 15px;
+    padding: 6px 0;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+/* »»»»»»»»»»»»»»» Services Section ««««««««««««««« */
+#services {
+    padding: 100px 8% 80px;
+    text-align: center;
+    background: #fff;
+}
+
+#services h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #111827;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    padding: 28px;
+    transition: 0.9s;
+}
+
+.service-card h3 {
+    font-size: 25px;
+    padding-bottom: 20px;
+    color: #111827;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #4b5563;
+    padding-bottom: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    border-color: #3b82f6;
+}
+
+/* »»»»»»»»»»»»»»» Tibs Section ««««««««««««««« */
+#tips {
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 60px 10%;
+}
+
+#tips h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #111827;
+}
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.tip-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+    transition: 0.9s;
+}
+
+.tip-card:hover {
+    background-color: #3b82f6;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+}
+
+.tip-card img {
+    width: 42px;
+    margin-bottom: 12px;
+}
+
+/* »»»»»»»»»»»»»»» Contact Footer ««««««««««««««« */
+#Contact {
+    background: linear-gradient(#f8fafc, #7690be);
+    padding: 50px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-container {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-color: #3b82f6;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.contactme h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #111827;
+}
+
+.contactme p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contactme a {
+    color: #111827;
+    text-decoration: none;
+}
+
+.contactme a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(92, 92, 121, 0.455);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media a {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.social-media a:hover {
+    transform: translateY(-6px);
+}
+
+.insta {
+    width: 40px;
+    height: 40px;
+}
+
+.face {
+    width: 33px;
+    height: 33px;
+}
+
+.linked {
+    width: 29px;
+    height: 29px;
+}
+
+.git {
+    width: 32px;
+    height: 32px;
+}
+
+/* »»»»»»»»»»»»»»» Responsive Design ««««««««««««««« */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    /*  »»»»»»»»»»»»»»» Navbar ««««««««««««««« */
+    nav {
+        padding: 12px 5%;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    /* »»»»»»»»»»»»»»» Home Section ««««««««««««««« */
+    #home h2 {
+        font-size: 32px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+
+    /* »»»»»»»»»»»»»»» Cards ««««««««««««««« */
+    .department-grid,
+    .service-grid,
+    .tip-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+
+    /*  »»»»»»»»»»»»»»» Navbar ««««««««««««««« */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav .logo {
+        transform: none;
+        width: auto;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    /* »»»»»»»»»»»»»»» Home Section ««««««««««««««« */
+    #home {
+        padding: 80px 20px;
+    }
+
+    #home h2 {
+        font-size: 26px;
+    }
+
+    #home p {
+        font-size: 15px;
+    }
+
+    #home button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* »»»»»»»»»»»»»»» Sections ««««««««««««««« */
+
+    #departments,
+    #services,
+    #tips {
+        padding: 70px 6%;
+    }
+
+    #departments h2,
+    #services h2,
+    #tips h2 {
+        font-size: 28px;
+    }
+
+    /* »»»»»»»»»»»»»»» Cards ««««««««««««««« */
+    .department-card,
+    .service-card,
+    .tip-card {
+        padding: 20px;
+    }
+
+    .department-card h3,
+    .service-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    #home h2 {
+        font-size: 22px;
+    }
+
+    #home p {
+        font-size: 14px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .social-media {
+        gap: 12px;
+    }
+}
+
+
+
+
+/*  »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» Al Aqsa University ««««««««««««««««««««««««««««««««««««««««««««««««««
+    »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» Computer Scinces «««««««««««««««««««««««««««««««««««««««««««««««««««
+    »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» Instructor ---» Dr. Musbah J. Mousa «««««««««««««««««««««««««««««««««««««««««
+    »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» Stusent Name ---» Ahmed M. Y. Al-Farani «««««««««««««««««««««««««««««««««««««««
+    »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» Student No ---» 1320236338 «««««««««««««««««««««««««««««««««««««««««««««  */
